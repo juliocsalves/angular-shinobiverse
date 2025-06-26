@@ -1,0 +1,137 @@
+.home__container {
+  width: 90%;
+  margin: 4rem auto 1rem;
+  padding-bottom: 10rem;
+  top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animação de entrada */
+.home__container app-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: calc(var(--i) * 80ms);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animação estilo subida suave */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação de saída (desaparecendo) */
+.home__container app-card.desaparecendo {
+  animation: fadeOutDown 0.5s ease forwards;
+  pointer-events: none;
+}
+
+/* Animação de desaparecimento estilo Naruto */
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+/* Botão chakra fixo no fundo */
+.home-container__Visualizar {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  z-index: 2;
+}
+
+/* Estilo do botão chakra laranja */
+.btn__Visualizar {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Ninja Naruto', sans-serif;
+  color: #000;
+  background-color: #f57c00;
+  border: none;
+  border-radius: 12px;
+
+  box-shadow: 0 0 10px #3ac1ff, 0 0 20px #1a75d1;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn__Visualizar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #4dc4ff, 0 0 30px #1a75d1;
+  background-color: #ffa726;
+}
+
+/* Responsividade */
+@media (max-width: 1280px) {
+  .home__container {
+    justify-content: center;
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home__container {
+    justify-content: center;
+    gap: 1.5rem;
+    padding-bottom: 9rem;
+  }
+
+  .btn__Visualizar {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home__container {
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 8rem;
+  }
+
+  .btn__Visualizar {
+    font-size: 1.3rem;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home__container {
+    width: 95%;
+    gap: 1rem;
+    padding-bottom: 7rem;
+  }
+
+  .btn__Visualizar {
+    font-size: 1.2rem;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn__Visualizar {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: 0.05rem;
+  }
+}

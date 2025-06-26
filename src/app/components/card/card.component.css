@@ -1,0 +1,173 @@
+app-card {
+	display: block;
+	flex: 0 1 calc(25% - 1.5rem);
+	/* max-width: 300px; */
+	min-width: 260px;
+	box-sizing: border-box;
+	margin-bottom: 1rem;
+	width: 90%;
+}
+
+
+.card__container {
+	position: relative;
+	/* Pra posicionar absoluto interno */
+	width: 450px;
+	height: 750px;
+	min-height: 700px;
+	margin: 2rem auto;
+	padding: 2rem 0;
+	background-color: #1f1f1f;
+	border: 3px solid #353535;
+	border-radius: 16px;
+	box-shadow: 0 8px 16px rgba(255, 165, 0, 0.4);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: visible;
+	color: inherit;
+	z-index: 1;
+}
+
+.card__dados {
+	width: 90%;
+	margin-top: auto;
+	margin-bottom: auto;
+	position: relative;
+	z-index: 1;
+}
+
+.card__dados__name {
+	width: 90%;
+	margin-top: 15px;
+	position: relative;
+	z-index: 1;
+}
+
+/* Botão */
+.card-container__button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	/* ✅ Garante que vá para o final da div pai */
+	position: relative;
+	z-index: 10;
+}
+
+
+.card__button {
+	height: 2.5rem;
+	width: 10rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
+	background: linear-gradient(45deg, #f97316 0%, #ffba08 100%);
+	color: white;
+	border: 2px solid black;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+
+.card__button:hover {
+	background: linear-gradient(45deg, #ffba08 0%, #f97316 100%);
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 4px 12px rgba(255, 186, 8, 0.7);
+}
+
+.card__button:active {
+	transform: translateY(0) scale(1);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Pergaminho ninja */
+.card-jutsus-pergaminho {
+	position: absolute;
+	bottom: 7.5rem;
+	opacity: 0;
+	border: 3px solid #9e6427;
+	background: #ffffff77;
+	border-radius: 12px;
+	box-shadow:
+		inset 0 0 20px rgba(0, 0, 0, 0.5),
+		0 4px 16px rgba(255, 165, 0, 0.3);
+	backdrop-filter: blur(2px);
+	transition: width 0.6s ease, opacity 0.6s ease, padding 0.6s ease;
+	padding: 0;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 2.7rem;
+}
+
+.card-jutsus-pergaminho.open {
+	width: 90%;
+	opacity: 1;
+	padding: 1rem;
+	height: auto;
+}
+
+.card-jutsus-pergaminho app-card-jutsus {
+	height: auto !important;
+	overflow-y: visible !important;
+	box-sizing: border-box;
+}
+
+.card-jutsus-pergaminho::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	background-size: cover;
+	opacity: 0.4;
+	mix-blend-mode: screen;
+	z-index: 25;
+}
+
+@media (max-width: 1024px) {
+  .card__container {
+    width: 400px;
+    padding: 1.75rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card__container {
+    width: 90%;
+    padding: 1.5rem 0;
+  }
+
+  .card-jutsus-pergaminho {
+    bottom: 5rem;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card__container {
+    width: 95%;
+    padding: 1rem 0;
+    border-width: 2px;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+  }
+
+  .card-jutsus-pergaminho {
+    bottom: 4.5rem;
+    margin: 0 1rem;
+  }
+
+  .card__button {
+    width: 100%;
+    max-width: 8rem;
+    font-size: 14px;
+  }
+}

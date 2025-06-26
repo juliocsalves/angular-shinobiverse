@@ -1,0 +1,11 @@
+.card-rank__container {
+  padding-top: 10px;
+  padding-left: 13px;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.card-rank__container > i {
+  color: inherit;
+}

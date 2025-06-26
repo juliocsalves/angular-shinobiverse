@@ -1,0 +1,10 @@
+.card-cla__container {
+  padding: 10px 0 0 13px;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.card-cla__container > i {
+  color: inherit;
+}

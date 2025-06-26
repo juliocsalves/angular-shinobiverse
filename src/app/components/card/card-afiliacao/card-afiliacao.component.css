@@ -1,0 +1,12 @@
+.card-afiliacao__container {
+  padding-top: 20px;
+  padding-left: 13px;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.card-afiliacao__container > i {
+  color: inherit;
+}
+

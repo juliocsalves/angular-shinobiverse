@@ -1,0 +1,24 @@
+<div class="card__container">
+  <app-card-image [shinobiImg]="shinobiImg"></app-card-image>
+
+	<div class="card__dados__name">
+    <app-card-name [shinobiName]="shinobiName"></app-card-name>
+  </div>
+
+  <div class="card__dados">
+    <app-card-afiliacao [shinobiAfiliacao]="shinobiAfiliacao"></app-card-afiliacao>
+    <app-card-equipe [shinobiEquipe]="shinobiEquipe"></app-card-equipe>
+    <app-card-cla [shinobiCla]="shinobiCla"></app-card-cla>
+    <app-card-rank [shinobiRank]="shinobiRank"></app-card-rank>
+  </div>
+
+  <div class="card-container__button">
+    <button class="card__button" (click)="toggleJutsus()">
+      {{ showJutsus ? 'Ocultar Jutsus' : 'Ver Jutsus' }}
+    </button>
+  </div>
+
+  <div class="card-jutsus-pergaminho" [class.open]="showJutsus">
+    <app-card-jutsus [jutsus]="jutsus"></app-card-jutsus>
+  </div>
+</div>
