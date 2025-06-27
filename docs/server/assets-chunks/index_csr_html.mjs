@@ -12,7 +12,7 @@ export default `<!doctype html>
 
 <body ngcm="">
 	<app-root></app-root>
-<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-6SYIZTU2.js" type="module"></script></body>
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-23UP4JRP.js" type="module"></script></body>
 
 </html>
 `;

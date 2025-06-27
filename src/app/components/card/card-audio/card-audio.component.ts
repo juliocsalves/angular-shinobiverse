@@ -23,11 +23,12 @@ export class CardAudioComponent {
       this.audio = new Audio('assets/audio/senya_crescent_sun__itachi.mp3');
       this.audio.loop = true;
       this.audio.volume = 0.5;
+			console.log(this.audio);
     }
   }
 
   toggleAudio() {
-		console.log(this.audio);
+		console.log('chegou aqui');
     if (!this.isBrowser || !this.audio) return;
 
     if (this.isPlaying) {
