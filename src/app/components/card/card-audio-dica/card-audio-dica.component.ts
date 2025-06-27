@@ -12,6 +12,7 @@ export class CardAudioDicaComponent {
   @Output() clicado = new EventEmitter<void>();
 
   emitirClique() {
+		console.log('card-audio-dica');
     this.clicado.emit();
   }
 }

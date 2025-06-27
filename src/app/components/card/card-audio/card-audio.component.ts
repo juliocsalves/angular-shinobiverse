@@ -28,7 +28,7 @@ export class CardAudioComponent {
   }
 
   toggleAudio() {
-		console.log('chegou aqui');
+		console.log('toggleAudio');
     if (!this.isBrowser || !this.audio) return;
 
     if (this.isPlaying) {
@@ -42,7 +42,7 @@ export class CardAudioComponent {
   }
 
   iniciarAudio() {
-		console.log('chegou');
+		console.log('iniciaraudio');
     if (!this.isBrowser || !this.audio) return;
 
     this.audio.play().then(() => {
