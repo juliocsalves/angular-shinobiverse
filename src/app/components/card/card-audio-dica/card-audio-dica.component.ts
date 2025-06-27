@@ -9,10 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./card-audio-dica.component.css'],
 })
 export class CardAudioDicaComponent {
-  @Output() clicado = new EventEmitter<void>();
+  @Output()
+	clicado = new EventEmitter<void>();
 
   emitirClique() {
-		console.log('card-audio-dica');
+		console.log('Emitindo clique');
     this.clicado.emit();
   }
 }
