@@ -5,11 +5,12 @@ import { map, tap } from 'rxjs/operators';
 
 import { CardComponent } from '../../components/card/card.component';
 import { ShinobiService, Shinobi } from '../../services/shinobi.service';
+import { CardAudioComponent } from "../../components/card/card-audio/card-audio.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, CardComponent],
+  imports: [CommonModule, CardComponent, CardAudioComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

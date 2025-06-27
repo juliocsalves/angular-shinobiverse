@@ -1,0 +1,15 @@
+<app-card-audio-dica
+  *ngIf="mostrarDica"
+  (clicado)="iniciarAudio()"
+></app-card-audio-dica>
+
+<div
+  class="card-audio__container"
+  *ngIf="!mostrarDica"
+  (click)="toggleAudio()"
+>
+  <div class="controlador-audio" [class.playing]="isPlaying">
+    <div class="pulso-chakra"></div>
+    <div class="icon"></div>
+  </div>
+</div>

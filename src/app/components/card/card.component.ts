@@ -19,7 +19,8 @@ import { CardJutsusComponent } from './card-jutsus/card-jutsus.component';
     CardEquipeComponent,
     CardClaComponent,
     CardRankComponent,
-    CardJutsusComponent
+    CardJutsusComponent,
+		CommonModule
   ],
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']

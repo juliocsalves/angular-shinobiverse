@@ -74,12 +74,13 @@
 /* Mobile pequeno */
 @media (max-width: 510px) {
   .logo-naruto {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 0.15rem;
   }
 
   .card-title__container {
     height: 5rem;
+		width: 100%;
     padding: 0 0.75rem;
   }
 }

@@ -154,10 +154,14 @@ app-card {
 
 @media (max-width: 480px) {
   .card__container {
-    width: 95%;
+    width: 23.4rem;
     padding: 1rem 0;
+		margin: 0;
     border-width: 2px;
     box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
   }
 
   .card-jutsus-pergaminho {
