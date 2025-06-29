@@ -1,9 +1,32 @@
 .card-name__container {
-  color: #e98102;
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  font-family: 'Ninja Naruto', sans-serif;
-  letter-spacing: 0.1rem;
+	color: #e98102;
+	margin-top: 2rem;
+	text-align: center;
+	font-size: 2rem;
+	font-family: 'Ninja Naruto', sans-serif;
+	letter-spacing: 0.1rem;
 }
 
+/* Responsividade */
+
+/* SM - Celulares grandes */
+@media (min-width: 576px) and (max-width: 767px) {
+	.card-name__container {
+		font-size: 33px;
+	}
+}
+
+/* MD - Tablets - 768px até 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+	.card-name__container {
+		height: 2rem;
+		font-size: 36px;
+	}
+}
+
+/* LG - Notebooks e desktops menores - 992px até 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.card-name__container {
+		font-size: 2.2rem;
+	}
+}

@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/angular-shinobiverse',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },

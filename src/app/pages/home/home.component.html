@@ -1,5 +1,5 @@
+ <app-card-audio></app-card-audio>
  <div class="home__container">
-	<app-card-audio></app-card-audio>
   <ng-container *ngIf="shinobis$ | async as shinobis; else carregando">
     <app-card
       *ngFor="let shinobi of shinobis; let i = index"

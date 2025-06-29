@@ -29,3 +29,114 @@
   transform: scale(1.1);
 }
 
+/* ### Responsividade ### */
+
+.card-image__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  height: 300px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 3px solid #9f641c;
+  border-radius: 16px;
+  background-color: #2b2b2b;
+  overflow: hidden; /* aqui é onde o corte acontece */
+}
+
+.card-image {
+  width: 450px;
+  height: 300px;
+  transition: transform 0.8s ease;
+  object-fit: cover;
+}
+
+.card-image__container:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-image__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  height: 300px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 3px solid #9f641c;
+  border-radius: 16px;
+  background-color: #2b2b2b;
+  overflow: hidden; /* aqui é onde o corte acontece */
+}
+
+.card-image {
+  width: 450px;
+  height: 300px;
+  transition: transform 0.8s ease;
+  object-fit: cover;
+}
+
+.card-image__container:hover .card-image {
+  transform: scale(1.1);
+}
+
+/* XS - Celulares pequenos */
+@media (max-width: 575px) {
+  .card-image__container {
+    width: 18rem;
+    height: auto;
+  }
+
+  .card-image {
+    width: 280px;
+    height: 180px;
+  }
+}
+
+/* SM - Celulares grandes */
+@media (min-width: 576px) and (max-width: 767px) {
+  .card-image__container {
+    width: 90%;
+    height: 220px;
+		margin-top: 0.5rem;
+  }
+
+  .card-image {
+    width: 350px;
+    height: 220px;
+  }
+}
+
+/* MD - Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-image__container {
+    width: 100%;
+    height: auto;
+		margin-top: 0.3rem;
+  }
+
+  .card-image {
+    width: 400px;
+    height: 260px;
+  }
+}
+
+/* LG - Notebooks e desktops menores */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .card-image__container {
+    width: 80%;
+    height: 300px;
+  }
+
+  .card-image {
+    width: 450px;
+    height: 300px;
+  }
+}

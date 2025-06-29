@@ -35,52 +35,61 @@
      0 0 20px #1a237e;
 }
 
-/* Desktop grande */
-@media (max-width: 1200px) {
-  .logo-naruto {
-    font-size: 3.2rem;
-  }
 
-  .card-title__container {
-    height: 6.5rem;
-  }
-}
+/* ### Responsividade ### */
 
-/* Tablets e telas médias */
-@media (max-width: 900px) {
-  .logo-naruto {
-    font-size: 2.8rem;
-    letter-spacing: 0.25rem;
-  }
-
-  .card-title__container {
-    height: 6rem;
-  }
-}
-
-/* Mobile grande */
-@media (max-width: 600px) {
-  .logo-naruto {
-    font-size: 2.4rem;
-    letter-spacing: 0.2rem;
-  }
-
-  .card-title__container {
-    height: 5.5rem;
-    padding: 0 1rem;
-  }
-}
-
-/* Mobile pequeno */
-@media (max-width: 510px) {
-  .logo-naruto {
-    font-size: 1.5rem;
-    letter-spacing: 0.15rem;
-  }
-
+/* XS: até 575px - Celulares pequenos */
+@media (max-width: 575px) {
   .card-title__container {
     height: 5rem;
-		width: 100%;
-    padding: 0 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .logo-naruto {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+/* SM: 576px até 767px - Celulares grandes */
+@media (min-width: 576px) and (max-width: 767px) {
+  .card-title__container {
+    height: 5.5rem;
+    padding: 0 1.2rem;
+  }
+
+  .logo-naruto {
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* MD: 768px até 991px - Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-title__container {
+    height: 6rem;
+    padding: 0 1.5rem;
+  }
+
+  .logo-naruto {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* LG: 992px até 1199px - Notebooks */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .card-title__container {
+    height: 6.5rem;
+    padding: 0 2rem;
+  }
+
+  .logo-naruto {
+    font-size: 3.2rem;
+    letter-spacing: 0.25rem;
+    padding: 0.5rem 1rem;
   }
 }

@@ -1,19 +1,54 @@
 .home__container {
-  width: 90%;
-  margin: 4rem auto 1rem;
-  padding-bottom: 10rem;
-  top: 5rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-  position: relative;
-  z-index: 1;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	grid-auto-rows: auto;
+	gap: 1rem;
+
+	justify-items: center;
+	align-items: start;
+	justify-content: center;
+
+	width: 100%;
+	max-width: 1400px;
+	margin: 4rem auto 1rem auto;
+	padding-bottom: 7rem;
+	/* AUMENTADO para dar espaço ao botão fixo */
+	top: 5rem;
+	position: relative;
+	z-index: 1;
 }
 
-/* Animação de entrada */
+/* Botão chakra fixo no fundo */
+.home-container__Visualizar {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: fit-content;
+	z-index: 10;
+}
+
+/* Estilo do botão chakra laranja */
+.btn__Visualizar {
+	padding: 0.75rem 1.5rem;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	font-family: 'Ninja Naruto', sans-serif;
+	color: #000;
+	background-color: #f57c00;
+	border-radius: 12px;
+	width: auto;
+	box-shadow: 0 0 10px #3ac1ff, 0 0 20px #1a75d1;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.btn__Visualizar:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 15px #4dc4ff, 0 0 30px #1a75d1;
+	background-color: #ffa726;
+}
+
 .home__container app-card {
   opacity: 0;
   transform: translateY(20px);
@@ -22,7 +57,7 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Animação estilo subida suave */
+/* Keyframe da animação de subida suave */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -30,123 +65,89 @@
   }
 }
 
-/* Animação de saída (desaparecendo) */
-.home__container app-card.desaparecendo {
-  animation: fadeOutDown 0.5s ease forwards;
-  pointer-events: none;
+
+/* ### Responsividade ### */
+
+/* XS: até 575px - Celulares pequenos */
+@media (max-width: 575px) {
+	.home__container {
+		grid-template-columns: 1fr;
+		padding: 0 1rem;
+		margin-top: 2.5rem;
+		padding-bottom: 12rem;
+		/* 👈 aumenta o fundo pra botão fixo */
+		height: auto;
+	}
+
+	.home-container__Visualizar {
+		position: absolute;
+		bottom: 1.5rem;
+	}
+
+	.btn__Visualizar {
+		font-size: 1rem;
+		padding: 0.5rem 1rem;
+	}
+
+	.home-container__Visualizar {
+		margin-bottom: 3rem;
+	}
+
 }
 
-/* Animação de desaparecimento estilo Naruto */
-@keyframes fadeOutDown {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(40px);
-  }
+/* SM: 576px até 767px - Celulares grandes */
+@media (min-width: 576px) and (max-width: 767px) {
+	.home__container {
+		grid-template-columns: 1fr;
+		padding: 0 1rem;
+		margin-top: 2.5rem;
+		padding-bottom: 7rem;
+		/* 👈 aumenta o fundo pra botão fixo */
+		height: auto;
+	}
+
+	.home-container__Visualizar {
+		position: absolute;
+		bottom: 1.5rem;
+	}
+
 }
 
-/* Botão chakra fixo no fundo */
-.home-container__Visualizar {
-  position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
-  z-index: 2;
+/* MD: 768px até 991px - Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+	.home__container {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		padding: 0 2rem;
+		padding-bottom: 7rem;
+	}
+
+	.btn__Visualizar {
+		font-size: 1.3rem;
+	}
+
+	.home-container__Visualizar {
+		left: 49%;
+
+	}
 }
 
-/* Estilo do botão chakra laranja */
-.btn__Visualizar {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
-  font-family: 'Ninja Naruto', sans-serif;
-  color: #000;
-  background-color: #f57c00;
-  border-radius: 12px;
-	width: auto;
-  box-shadow: 0 0 10px #3ac1ff, 0 0 20px #1a75d1;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.btn__Visualizar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #4dc4ff, 0 0 30px #1a75d1;
-  background-color: #ffa726;
-}
-
-/* Responsividade */
-@media (max-width: 1280px) {
+/* LG: 992px até 1199px - Notebooks */
+@media (min-width: 992px) and (max-width: 1199px) {
   .home__container {
-    justify-content: center;
-    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 0 2rem;
+    padding-bottom: 5rem; /* espaço extra pro botão */
   }
-}
 
-@media (max-width: 1024px) {
-  .home__container {
+  .home-container__Visualizar {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    padding-bottom: 9rem;
+    margin-bottom: 0;
   }
 
   .btn__Visualizar {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .home__container {
-    flex-direction: column;
-    align-items: stretch;
-    padding-bottom: 8rem;
-  }
-
-  .btn__Visualizar {
-    font-size: 1.3rem;
-    width: 80%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .home__container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    margin-top: 1.5rem;
-    padding-bottom: 10rem;
-  }
-
-  .btn__Visualizar {
-    width: 14rem;
-    margin: 2rem auto 0 auto;
-    display: block;
-    font-size: 1rem;
-  }
-
-  .card__container {
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-}
-
-
-
-@media (max-width: 360px) {
-  .btn__Visualizar {
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
-    letter-spacing: 0.05rem;
+    padding: 0.6rem 1.2rem;
   }
 }
