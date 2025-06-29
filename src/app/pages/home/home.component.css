@@ -12,7 +12,6 @@
 	max-width: 1400px;
 	margin: 4rem auto 1rem auto;
 	padding-bottom: 7rem;
-	/* AUMENTADO para dar espaço ao botão fixo */
 	top: 5rem;
 	position: relative;
 	z-index: 1;
@@ -28,7 +27,6 @@
 	z-index: 10;
 }
 
-/* Estilo do botão chakra laranja */
 .btn__Visualizar {
 	padding: 0.75rem 1.5rem;
 	font-size: 1.5rem;
@@ -57,7 +55,6 @@
 	transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Keyframe da animação de subida suave */
 @keyframes fadeInUp {
 	to {
 		opacity: 1;
@@ -65,64 +62,53 @@
 	}
 }
 
-/* 🔁 Animação de saída (quando personagem some da lista) */
 .home__container app-card.desaparecendo {
 	animation: fadeOutDown 0.5s ease forwards;
 	pointer-events: none;
 }
 
-/* 🔻 Estilo Naruto desaparecendo */
 @keyframes fadeOutDown {
 	from {
 		opacity: 1;
 		transform: translateY(0);
 	}
-
 	to {
 		opacity: 0;
 		transform: translateY(40px);
 	}
 }
 
-
-
 /* ### Responsividade ### */
 
-/* XS: até 575px - Celulares pequenos */
+/* XS: até 575px */
 @media (max-width: 575px) {
 	.home__container {
 		grid-template-columns: 1fr;
 		padding: 0 1rem;
 		margin-top: 2.5rem;
 		padding-bottom: 12rem;
-		/* 👈 aumenta o fundo pra botão fixo */
 		height: auto;
 	}
 
 	.home-container__Visualizar {
 		position: absolute;
 		bottom: 1.5rem;
+		margin-bottom: 3rem;
 	}
 
 	.btn__Visualizar {
 		font-size: 1rem;
 		padding: 0.5rem 1rem;
 	}
-
-	.home-container__Visualizar {
-		margin-bottom: 3rem;
-	}
-
 }
 
-/* SM: 576px até 767px - Celulares grandes */
+/* SM: 576px até 767px */
 @media (min-width: 576px) and (max-width: 767px) {
 	.home__container {
 		grid-template-columns: 1fr;
 		padding: 0 1rem;
 		margin-top: 2.5rem;
 		padding-bottom: 7rem;
-		/* 👈 aumenta o fundo pra botão fixo */
 		height: auto;
 	}
 
@@ -130,13 +116,12 @@
 		position: absolute;
 		bottom: 1.5rem;
 	}
-
 }
 
-/* MD: 768px até 991px - Tablets */
+/* MD: 768px até 991px */
 @media (min-width: 768px) and (max-width: 991px) {
 	.home__container {
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		grid-template-columns: 1fr; /* Corrigido: apenas 1 coluna pra evitar sobreposição */
 		padding: 0 2rem;
 		padding-bottom: 7rem;
 	}
@@ -147,20 +132,41 @@
 
 	.home-container__Visualizar {
 		left: 49%;
-
 	}
 }
 
-/* LG: 992px até 1199px - Notebooks */
+/* LG: 992px até 1199px */
 @media (min-width: 992px) and (max-width: 1199px) {
 	.home__container {
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		padding: 0 2rem;
 		padding-bottom: 5rem;
-		/* espaço extra pro botão */
 	}
 
 	.home-container__Visualizar {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0;
+	}
+
+	.btn__Visualizar {
+		font-size: 1.4rem;
+		padding: 0.6rem 1.2rem;
+	}
+}
+
+/* XL: 1200px até 1381px – ajuste de espaçamento */
+@media (min-width: 1200px) and (max-width: 1381px) {
+	.home__container {
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 1200px;
+		gap: 2rem;
+		padding: 0 2rem;
+		padding-bottom: 8rem; /* 🔧 espaço extra para o botão fixo */
+	}
+
+		.home-container__Visualizar {
 		width: 100%;
 		display: flex;
 		justify-content: center;
